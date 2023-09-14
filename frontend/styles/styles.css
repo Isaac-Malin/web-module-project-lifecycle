@@ -31,8 +31,8 @@ h1, h2, h3 {
 
 }
 
-h1 {
-  font-size: 1.75rem;
+.title {
+  font-size: 2rem;
   line-height: 5rem;
 }
 
@@ -77,9 +77,13 @@ ul, form {
 }
 
 .todo {
-  padding: 0.15rem;
+  padding: .5rem;
 }
 
 .todo:hover {
   cursor: pointer;
+  border-left: 2px solid lightblue;
+  margin-left: 5px;
 }
+
+
