@@ -80,19 +80,11 @@ export default class App extends React.Component {
     return (
       <div>
         <h1 className="title">Todos:</h1>
-        {this.state.todos.reduce((acc, td) => {
-          if (this.state.showAll || !td.completed)
-            return acc.concat(
-              <div
-                className="todo"
-                onClick={this.toggleCompleted(td.id)}
-                key={td.id}
-              >
-                {td.name} {td.completed ? "✔️" : ""}
-              </div>
-            );
-          return acc;
-        }, [])}
+        <TodoList 
+          todos={this.state.todos}
+          showAll={this.state.showAll}
+          toggleCompleted={this.toggleCompleted}
+        />
         <Form 
           onSubmit={this.onSubmit}
           showAll={this.state.showAll}
